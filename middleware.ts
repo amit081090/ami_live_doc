@@ -21,5 +21,5 @@ export const config = {
     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
     '/(api|trpc)(.*)',
   ],
-  runtime: 'nodejs', // Ensure that the middleware runs in Node.js, not in the Edge Runtime
+  // runtime: 'nodejs', // Ensure that the middleware runs in Node.js, not in the Edge Runtime
 };
