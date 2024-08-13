@@ -23,7 +23,7 @@ const ThreadWrapper=({thread}:ThreadWrapperProps)=>{
     )
 }
 
-const comments = () => {
+const Comments = () => {
 
     const {threads} = useThreads();
   return (
@@ -42,4 +42,4 @@ const comments = () => {
   )
 }
 
-export default comments
+export default Comments
