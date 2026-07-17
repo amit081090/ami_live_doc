@@ -54,7 +54,7 @@ export const getDocument = async ({roomId,userId}:{roomId:string ;userId:string}
         return parseStringify(room)
     } catch (error) {
 
-        console.log(`Error happened while getting a room: $(error)`)
+        console.log(`Error happened while getting a room: ${error}`)
         
     }
 
@@ -87,7 +87,7 @@ export const getDocuments = async (email:string)=>{
         return parseStringify(rooms)
     } catch (error) {
 
-        console.log(`Error happened while getting rooms: $(error)`)
+        console.log(`Error happened while getting rooms: ${error}`)
         
     }
 
@@ -123,9 +123,8 @@ export const updateDocumentAccess= async({roomId,email,userType,updatedBy}:Share
       })
         }
 
-        revalidatePath(`/documents/$({roomId}`)
-        return
-        parseStringify(room)
+        revalidatePath(`/documents/${roomId}`)
+        return parseStringify(room)
     } catch (error) {
         console.log(`Error Happened while updating a room.${error}`)
         
@@ -146,7 +145,7 @@ export const removeCollaborator= async({roomId,email}:{roomId:string,email:strin
               }
             })
 
-            revalidatePath('/documents/${roomId}');
+            revalidatePath(`/documents/${roomId}`);
 
             return parseStringify(updatedRoom)
     } catch (error) {

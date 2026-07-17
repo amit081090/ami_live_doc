@@ -48,12 +48,11 @@ const Home = async () => {
 
                 <div>
                   <Image
-                  
+                      src='/assets/icons/doc.svg'
                       alt='file'
                       width={40}
-                      height={40} src={''}                  
+                      height={40}
                   />
-
                 </div>
 
                 <div className='space-y-1'>
